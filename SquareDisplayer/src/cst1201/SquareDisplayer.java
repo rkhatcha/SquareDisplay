@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package cst1201;
+
+import java.util.Scanner;
 
 /**
  *
@@ -16,7 +17,18 @@ public class SquareDisplayer {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //1. Get input from user.
+        System.out.print("Please enter a positive integer less than or equal to 15: ");
+        Scanner scanner = new Scanner(System.in);
+        int inputNumber = scanner.nextInt();
+
+        while (inputNumber < 1 || inputNumber > 15) {
+            System.out.print("Incorrect. Please enter another number: ");
+            inputNumber = scanner.nextInt();
+        }
+
+        //At this point, I should have a valid input.
+        //2. Draw the square.
     }
-    
+
 }
